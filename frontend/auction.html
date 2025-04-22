@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link rel="stylesheet" href="src/styles/animations.css" />
+  </head>
+  <body class="">
+    <custom-header></custom-header>
+    <div id="auction-container"></div>
+
+    <form
+      class="mx-auto max-w-md mt-6 p-4 bg-gray-100 rounded-lg shadow-md"
+      id="bid-form"
+    >
+      <div class="flex items-center gap-4">
+        <input
+          class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          type="number"
+          id="bid-amount"
+          placeholder="Enter your bid"
+          required
+        />
+        <button
+          class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+          type="submit"
+        >
+          Bid
+        </button>
+      </div>
+    </form>
+
+    <custom-footer></custom-footer>
+    <script type="module" src="src/components/header.ts"></script>
+    <!-- <script type="module" src="src/main.ts"></script> -->
+    <script type="module" src="src/auction.ts"></script>
+    <script type="module" src="src/components/footer.ts"></script>
+  </body>
+</html>

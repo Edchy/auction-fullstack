@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Auction</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link rel="stylesheet" href="src/styles/animations.css" />
+  </head>
+  <body>
+    <custom-header></custom-header>
+    <div class="mb-6 p-6 bg-gray-50 rounded-lg shadow-md sticky top-0 z-50">
+      <div class="flex flex-wrap items-center gap-4 wrapper">
+        <label for="category-filter" class="text-sm font-medium text-gray-700">
+          Filter by Category:
+        </label>
+        <select
+          id="category-filter"
+          class="p-2 rounded border border-gray-300 text-sm text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        >
+          <option value="">All Categories</option>
+          <option value="Whiskey">Whiskey</option>
+          <option value="Pokemoncards">Pokemoncards</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="price-filter" class="text-sm font-medium text-gray-700">
+          Sort by Price:
+        </label>
+        <input
+          type="checkbox"
+          name="price"
+          id="price-filter"
+          class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+    </div>
+    <!-- HERO Section -->
+    <section
+      class="overflow-clip h-96 text-white flex items-center justify-center wrapper my-8 bg-[url('https://images.pexels.com/photos/31638919/pexels-photo-31638919/free-photo-of-panier-electrique.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-center relative rounded-lg shadow-sm"
+    >
+      <div class="absolute inset-0 bg-gray-800 opacity-70"></div>
+      <div class="z-10 text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to The Auction</h1>
+        <p class="text-lg">Bid on your favorite items!</p>
+      </div>
+    </section>
+    <section
+      class="custom-grid break-all gap-4 pt-4 pb-4 wrapper"
+      id="auctions-container"
+    ></section>
+
+    <div id="app"></div>
+    <custom-footer></custom-footer>
+    <script type="module" src="/src/components/header.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/components/footer.ts"></script>
+  </body>
+</html>
